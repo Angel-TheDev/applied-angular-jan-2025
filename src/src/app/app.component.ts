@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   template: `
-    <app-navigation-bar />
+    <app-navigation />
     <main class="container mx-auto">
       <router-outlet />
     </main>

@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-navigation-bar',
+  selector: 'app-navigation',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink],
   template: `
@@ -32,6 +32,7 @@ import { RouterLink } from '@angular/router';
             <li><a routerLink="/">Home</a></li>
 
             <li><a routerLink="resources">Resources</a></li>
+            <li><a routerLink="demos">Demos</a></li>
           </ul>
         </div>
         <a class="btn btn-ghost text-xl">Applied Angular</a>
@@ -41,6 +42,7 @@ import { RouterLink } from '@angular/router';
           <li><a routerLink="/">Home</a></li>
 
           <li><a routerLink="resources">Resources</a></li>
+          <li><a routerLink="demos">Demos</a></li>
         </ul>
       </div>
       <div class="navbar-end">

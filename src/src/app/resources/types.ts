@@ -1,4 +1,4 @@
-export type NewsItemsModel = {
+export type NewItemModel = {
   id: string;
   title: string;
   description: string;

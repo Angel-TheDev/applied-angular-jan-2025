@@ -1,12 +1,10 @@
 import {
-  Component,
   ChangeDetectionStrategy,
-  signal,
+  Component,
   computed,
   resource,
 } from '@angular/core';
-import { NewsItemsModel } from './types';
-import { StatusBarComponent } from './component/status-bar.component';
+import { StatusBarComponent } from './components/status-bar.component';
 
 @Component({
   selector: 'app-resources',
@@ -28,14 +26,14 @@ import { StatusBarComponent } from './component/status-bar.component';
             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        <span>Chill out, loading your news! It'll be worth it!</span>
+        <span>Loading your news! It'll be worth it!</span>
       </div>
     } @else {
       <div class="flex flex-col gap-8">
         @for (item of newsItems.value(); track item.id) {
           <div class="card bg-base-100 shadow-xl">
             <div class="card-body">
-              <h2 class="card-title">{{ item.title }}</h2>
+              <h3 class="card-title">{{ item.title }}</h3>
               <p>{{ item.description }}</p>
               <div class="card-actions justify-end">
                 <a
@@ -49,6 +47,7 @@ import { StatusBarComponent } from './component/status-bar.component';
           </div>
         }
       </div>
+
       <app-status-bar [totalNewsItems]="totalNewsItems()" />
     }
   `,
